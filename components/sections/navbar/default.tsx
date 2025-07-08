@@ -1,10 +1,10 @@
-import { Menu } from "lucide-react";
+import { Calendar, Calendar1, Menu } from "lucide-react";
 import { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
 import LaunchUI from "../../logos/launch-ui";
-import { Button, type ButtonProps } from "../../ui/button";
+import { Button} from "../../ui/button";
 import {
   Navbar as NavbarComponent,
   NavbarLeft,
@@ -21,7 +21,7 @@ interface NavbarLink {
 interface NavbarActionProps {
   text: string;
   href: string;
-  variant?: ButtonProps["variant"];
+ 
   icon?: ReactNode;
   iconRight?: ReactNode;
   isButton?: boolean;
@@ -40,20 +40,19 @@ interface NavbarProps {
 
 export default function Navbar({
   logo = <LaunchUI />,
-  name = "Launch UI",
+  name = "Guru Nanak Lab",
   homeUrl = "https://www.launchuicomponents.com/",
   mobileLinks = [
-    { text: "Getting Started", href: "https://www.launchuicomponents.com/" },
-    { text: "Components", href: "https://www.launchuicomponents.com/" },
-    { text: "Documentation", href: "https://www.launchuicomponents.com/" },
+    { text: "Services", href: "https://www.launchuicomponents.com/" },
+    { text: "About", href: "https://www.launchuicomponents.com/" },
+    { text: "Contact", href: "https://www.launchuicomponents.com/" },
   ],
   actions = [
-    { text: "Sign in", href: "https://www.launchuicomponents.com/", isButton: false },
     {
-      text: "Get Started",
+      text: "Book a Test",
       href: "https://www.launchuicomponents.com/",
       isButton: true,
-      variant: "default",
+      
     },
   ],
   showNavigation = true,
@@ -76,19 +75,21 @@ export default function Navbar({
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
           <NavbarRight>
-            {actions.map((action, index) =>
+          {actions.map((action, index) =>
               action.isButton ? (
-                <Button
-                  key={index}
-                  variant={action.variant || "default"}
-                  asChild
+             <>   
+              <Button
+                
+               
                 >
+               <Calendar1/>
                   <a href={action.href}>
                     {action.icon}
                     {action.text}
                     {action.iconRight}
                   </a>
                 </Button>
+                </>
               ) : (
                 <a
                   key={index}
@@ -130,6 +131,7 @@ export default function Navbar({
                 </nav>
               </SheetContent>
             </Sheet>
+           
           </NavbarRight>
         </NavbarComponent>
       </div>

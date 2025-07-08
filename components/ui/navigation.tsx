@@ -47,76 +47,76 @@ interface NavigationProps {
 export default function Navigation({
   menuItems = [
     {
-      title: "Getting started",
-      content: "default",
-    },
-    {
-      title: "Components",
+      title: "Services",
       content: "components",
     },
     {
-      title: "Documentation",
+      title: "About",
+      content: "default",
+    },
+    {
+      title: "Contact",
       isLink: true,
-      href: "https://www.launchuicomponents.com/",
+      href: "tel:+917527993354",
     },
   ],
   components = [
     {
-      title: "Alert Dialog",
-      href: "/docs/primitives/alert-dialog",
+      title: "General Health Screening",
+      href: "#",
       description:
-        "A modal dialog that interrupts the user with important content and expects a response.",
+        "CBC, HB, ESR, BLOOD GROUP ",
     },
     {
-      title: "Hover Card",
-      href: "/docs/primitives/hover-card",
+      title: "Diabetes Testing",
+      href: "#",
       description:
-        "For sighted users to preview content available behind a link.",
+        "RBS, FBS",
     },
     {
-      title: "Progress",
-      href: "/docs/primitives/progress",
+      title: "Liver Function Test",
+      href: "#",
       description:
-        "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+        "LFT, BILIRUBIN, SGOT, SGPT",
     },
     {
-      title: "Scroll-area",
-      href: "/docs/primitives/scroll-area",
-      description: "Visually or semantically separates content.",
+      title: "Kidney Function Tests",
+      href: "#",
+      description: "KIDNEY FUNCTION, UREA, CREATININE",
     },
     {
-      title: "Tabs",
-      href: "/docs/primitives/tabs",
+      title: "Heart and Lipid Profile",
+      href: "#",
       description:
-        "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+        "CHOLESTROL, TRIGLYCERIDE, LIPID PROFILE",
     },
     {
-      title: "Tooltip",
-      href: "/docs/primitives/tooltip",
+      title: "Hormonal, Allergy & Special Tests",
+      href: "#",
       description:
-        "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+        "THYROID, CALCIUM, RA FACTOR, ALLERGY TEST, WIDAL, URINE COMPLETE",
     },
   ],
   logo = <LaunchUI />,
-  logoTitle = "Launch UI",
-  logoDescription = "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project.",
-  logoHref = "https://www.launchuicomponents.com/",
+  logoTitle = "Guru Nanak Lab",
+  logoDescription = "Address: V.P.O Bhadas Distt. Kapurthala",
+  logoHref = "#",
   introItems = [
     {
-      title: "Introduction",
-      href: "https://www.launchuicomponents.com/",
+      title: "Trusted Accuracy",
+      href: "#",
       description:
-        "Re-usable components built using Radix UI and Tailwind CSS.",
+        "Reliable results you can count on.",
     },
     {
-      title: "Installation",
-      href: "https://www.launchuicomponents.com/",
-      description: "How to install dependencies and structure your app.",
+      title: "Fast Reports",
+      href: "#",
+      description: "Quick testing, quicker delivery.",
     },
     {
-      title: "Typography",
-      href: "https://www.launchuicomponents.com/",
-      description: "Styles for headings, paragraphs, lists...etc",
+      title: "Affordable Prices",
+      href: "#",
+      description: "Quality care that fits your budget.",
     },
   ],
 }: NavigationProps) {
