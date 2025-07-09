@@ -1,20 +1,13 @@
-import { Check } from "lucide-react";
-import Link from "next/link";
+import { Calendar, Calendar1, Check } from "lucide-react";
 import labpicture from "../../public/img/1.jpg"
-import Cartooon from "../../public/img/2.avif"
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import Navbar from "./navbar/default";
 
 export default function HeroSectionPage() {
-  const navItems = [
-    { title: "Why us", href: "#" },
-    { title: "Our Process", href: "#" },
-    { title: "Testimonials", href: "#" },
-    { title: "FAQ", href: "#" },
-  ];
-
+ 
   return (
     <main className="min-h-screen bg-gradient-to-br from-background to-accent/80">
       <Navbar/>
@@ -27,33 +20,32 @@ export default function HeroSectionPage() {
               variant="7xl/medium"
               className="tracking-tight text-foreground"
             >
-              Renovate Effortlessly
+             Test with Confidence
             </Typography>
             <Typography
               as="h1"
               variant="xl/normal"
               className="text-foreground/80"
             >
-              Effortlessly compare quotes from top quality contractors, and get
-              peace of mind with warranty & price protections.
+              Effortlessly compare diagnostic test packages from certified labs, and get peace of mind with accurate reports, timely delivery, and patient-first care.
             </Typography>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button size="lg">Get an estimate</Button>
+              <Button size="lg"> <Calendar1/> Book a Test</Button>
               <Button size="lg" variant={"outline"}>
                 <span className="relative mr-1 flex h-2.5 w-2.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
                 </span>
-                Live demo
+               View Tests
               </Button>
             </div>
             <ul className="space-y-3 text-sm text-muted-foreground">
               {[
-                "Advanced Analytics",
-                "Team Collaboration",
-                "Custom Integrations",
-                "24/7 Premium Support",
+                "Reliable Test Accuracy",
+                "Reliable Test Accuracy",
+                "Reliable Test Accuracy",
+                "Reliable Test Accuracy",
               ].map((feature) => (
                 <li key={feature} className="flex items-center space-x-2">
                   <Badge className="rounded-md p-1">
@@ -70,7 +62,7 @@ export default function HeroSectionPage() {
           <div
             className="relative min-h-screen bg-opacity-50 bg-cover bg-center opacity-50"
             style={{
-              backgroundImage: `url(${Cartooon})`,
+              backgroundImage: `url(${labpicture.src})`,
             }}
           ></div>
         </div>

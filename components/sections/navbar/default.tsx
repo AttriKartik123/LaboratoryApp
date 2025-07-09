@@ -1,4 +1,4 @@
-import { Calendar, Calendar1, Menu } from "lucide-react";
+import { Calendar1, Menu } from "lucide-react";
 import { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
