@@ -1,4 +1,4 @@
-import { Calendar, Calendar1, Check } from "lucide-react";
+import {Calendar1, Check } from "lucide-react";
 import labpicture from "../../public/img/1.jpg"
 
 import { Badge } from "@/components/ui/badge";

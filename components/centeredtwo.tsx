@@ -6,7 +6,7 @@ export default function PageHeading() {
           Visit Our Laboratory
         </h1>
         <p className="text-muted-foreground mt-4 text-xl">
-          Conviniently located and comfortable waiting area 
+          Conveniently located and comfortable waiting area 
         </p>
       </div>
     </div>
