@@ -16,11 +16,11 @@ export default function HeroSectionPage() {
         <div className="container col-span-2 mx-auto pt-32 lg:col-span-1 lg:max-w-xl">
           <div className="space-y-6 px-4 py-16">
             <Typography
-              as="h1"
-              variant="7xl/medium"
+              as="h3"
+              variant="5xl/medium"
               className="tracking-tight text-foreground"
             >
-             Test with Confidence
+             Accurate Medical Testing For Your Health
             </Typography>
             <Typography
               as="h1"
@@ -43,13 +43,13 @@ export default function HeroSectionPage() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               {[
                 "Reliable Test Accuracy",
-                "Reliable Test Accuracy",
-                "Reliable Test Accuracy",
-                "Reliable Test Accuracy",
+                "Expert Lab Technicians",
+                "Seamless Digital Reports",
+                "24/7 Customer Support",
               ].map((feature) => (
                 <li key={feature} className="flex items-center space-x-2">
                   <Badge className="rounded-md p-1">
-                    <Check className="h-4 w-4 text-primary" />
+                    <Check className="h-4 w-4 text-white" />
                   </Badge>
 
                   <span>{feature}</span>
