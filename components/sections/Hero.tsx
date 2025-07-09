@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import Navbar from "./navbar/default";
 
+
+
 export default function HeroSectionPage() {
  
   return (
