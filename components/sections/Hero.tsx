@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import {Calendar1, Check } from "lucide-react";
 import labpicture from "../../public/img/1.jpg"
 
@@ -5,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import Navbar from "./navbar/default";
+import Link from "next/link";
 
 
 
@@ -34,13 +36,15 @@ export default function HeroSectionPage() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button size="lg"> <Calendar1/> Book a Test</Button>
-              <Button size="lg" variant={"outline"}>
-                <span className="relative mr-1 flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-                </span>
-               View Tests
-              </Button>
+             <Button size="lg" variant="outline" asChild>
+  <Link href="/#testslab" className="flex items-center">
+    <span className="relative mr-2 flex h-2.5 w-2.5">
+      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
+      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+    </span>
+    View Tests
+  </Link>
+</Button>
             </div>
             <ul className="space-y-3 text-sm text-muted-foreground">
               {[

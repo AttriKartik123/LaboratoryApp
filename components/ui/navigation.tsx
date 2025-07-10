@@ -49,6 +49,7 @@ export default function Navigation({
     {
       title: "Services",
       content: "components",
+  
     },
     {
       title: "About",
@@ -63,36 +64,36 @@ export default function Navigation({
   components = [
     {
       title: "General Health Screening",
-      href: "#",
+      href: "/#services",
       description:
         "CBC, HB, ESR, BLOOD GROUP ",
     },
     {
       title: "Diabetes Testing",
-      href: "#",
+      href: "/#services",
       description:
         "RBS, FBS",
     },
     {
       title: "Liver Function Test",
-      href: "#",
+      href: "/#services",
       description:
         "LFT, BILIRUBIN, SGOT, SGPT",
     },
     {
       title: "Kidney Function Tests",
-      href: "#",
+      href: "/#services",
       description: "KIDNEY FUNCTION, UREA, CREATININE",
     },
     {
       title: "Heart and Lipid Profile",
-      href: "#",
+      href: "/#services",
       description:
         "CHOLESTROL, TRIGLYCERIDE, LIPID PROFILE",
     },
     {
       title: "Hormonal, Allergy & Special Tests",
-      href: "#",
+      href: "/#services",
       description:
         "THYROID, CALCIUM, RA FACTOR, ALLERGY TEST, WIDAL, URINE COMPLETE",
     },
@@ -104,18 +105,18 @@ export default function Navigation({
   introItems = [
     {
       title: "Trusted Accuracy",
-      href: "#",
+      href: "/#footer",
       description:
         "Reliable results you can count on.",
     },
     {
       title: "Fast Reports",
-      href: "#",
+      href: "/#footer",
       description: "Quick testing, quicker delivery.",
     },
     {
       title: "Affordable Prices",
-      href: "#",
+      href: "/#footer",
       description: "Quality care that fits your budget.",
     },
   ],

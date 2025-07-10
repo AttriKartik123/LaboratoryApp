@@ -1,11 +1,11 @@
 import {
   Activity,
   Clock,
-  Contact,
   Heart,
   MapPin,
   Microscope,
   Phone,
+  PhoneCall,
   Shield,
   Stethoscope,
   TestTube,
@@ -14,10 +14,10 @@ import CardComponent from "./Cards";
 import Hero from "./sections/Hero";
 import SimplePageHeading from "./simple-centered";
 import PageHeading from "./centeredtwo";
-import { title } from "process";
 import Contactcard from "./Contact";
-import { Table, TableHead, TableHeader, TableRow } from "./ui/table";
 import PriceTable from "./PriceTable";
+import { Button } from "./ui/button";
+import  Footer  from "./Footer";
 
 
 const carddata = [
@@ -150,9 +150,9 @@ export default function HomePage() {
     <>
       <Hero />
       <SimplePageHeading />
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section id="services" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {carddata.map((c, index) => (
-          <CardComponent
+          <CardComponent 
             key={index}
             title={c.title}
             description={c.description}
@@ -164,9 +164,12 @@ export default function HomePage() {
           />
         ))}
       </section>
-      <PageHeading />
+      <div id="testslab">
+  <PageHeading />
+      </div>
+    
 
- <PriceTable data={pricevalues} />
+ <PriceTable  data={pricevalues} />
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
         {Contactdata.map((cx, index) => (
@@ -178,8 +181,18 @@ export default function HomePage() {
           />
         ))}
       </section>
+<div className="flex items-center justify-center mt-10 ">
+  <a href="tel:+917527993354">
+  <Button  className="text-white bg-black  border border-white">
+ <PhoneCall/>   Book appointment
+  </Button>
+  </a>
+</div> 
+<div id="footer">
 
-  
-    </>
+<Footer />
+</div>
+
+</>
   );
 }

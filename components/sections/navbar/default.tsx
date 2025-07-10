@@ -1,10 +1,8 @@
-import { Calendar1, Menu } from "lucide-react";
+import { Calendar1, Menu, Microscope } from "lucide-react";
+import Link from "next/link";
 import { ReactNode } from "react";
-
 import { cn } from "@/lib/utils";
-
-import LaunchUI from "../../logos/launch-ui";
-import { Button} from "../../ui/button";
+import { Button } from "../../ui/button";
 import {
   Navbar as NavbarComponent,
   NavbarLeft,
@@ -21,7 +19,6 @@ interface NavbarLink {
 interface NavbarActionProps {
   text: string;
   href: string;
- 
   icon?: ReactNode;
   iconRight?: ReactNode;
   isButton?: boolean;
@@ -39,20 +36,19 @@ interface NavbarProps {
 }
 
 export default function Navbar({
-  logo = <LaunchUI />,
+  logo = <Microscope width={80} height={40} />,
   name = "Guru Nanak Lab",
-  homeUrl = "https://www.launchuicomponents.com/",
+  homeUrl = "/",
   mobileLinks = [
-    { text: "Services", href: "https://www.launchuicomponents.com/" },
-    { text: "About", href: "https://www.launchuicomponents.com/" },
-    { text: "Contact", href: "https://www.launchuicomponents.com/" },
+    { text: "Services", href: "/#services" },
+    { text: "About", href: "/#about" },
+    { text: "Contact", href: "tel:+917527993354" },
   ],
   actions = [
     {
       text: "Book a Test",
-      href: "https://www.launchuicomponents.com/",
+      href: "tel:+917527993354",
       isButton: true,
-      
     },
   ],
   showNavigation = true,
@@ -65,31 +61,22 @@ export default function Navbar({
       <div className="max-w-container relative mx-auto">
         <NavbarComponent>
           <NavbarLeft>
-            <a
-              href={homeUrl}
-              className="flex items-center gap-2 text-xl font-bold"
-            >
+            <Link href={homeUrl} className="flex items-center gap-2 text-xl font-bold">
               {logo}
               {name}
-            </a>
+            </Link>
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
+
           <NavbarRight>
-          {actions.map((action, index) =>
+            {actions.map((action, index) =>
               action.isButton ? (
-             <>   
-              <Button
-                
-               
-                >
-               <Calendar1/>
-                  <a href={action.href}>
-                    {action.icon}
+                <Button key={index} asChild>
+                  <a href={action.href} className="flex items-center gap-2">
+                    <Calendar1 className="w-4 h-4" />
                     {action.text}
-                    {action.iconRight}
                   </a>
                 </Button>
-                </>
               ) : (
                 <a
                   key={index}
@@ -98,8 +85,9 @@ export default function Navbar({
                 >
                   {action.text}
                 </a>
-              ),
+              )
             )}
+
             <Sheet>
               <SheetTrigger asChild>
                 <Button
@@ -113,25 +101,26 @@ export default function Navbar({
               </SheetTrigger>
               <SheetContent side="right">
                 <nav className="grid gap-6 text-lg font-medium">
-                  <a
+                  <Link
                     href={homeUrl}
                     className="flex items-center gap-2 text-xl font-bold"
                   >
+                    {logo}
                     <span>{name}</span>
-                  </a>
+                  </Link>
                   {mobileLinks.map((link, index) => (
-                    <a
+                    <Link
                       key={index}
                       href={link.href}
+                      scroll
                       className="text-muted-foreground hover:text-foreground"
                     >
                       {link.text}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </SheetContent>
             </Sheet>
-           
           </NavbarRight>
         </NavbarComponent>
       </div>
