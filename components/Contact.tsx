@@ -1,10 +1,11 @@
-import { MapPin } from "lucide-react";
+
+import { ReactNode } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 
 interface Contactprop {
     icon : React.ReactNode ,
     title: string ,
-    content: string ,
+    content: ReactNode ,
 }
 export default function Contactcard({icon , title ,content}: Contactprop) {
   return (

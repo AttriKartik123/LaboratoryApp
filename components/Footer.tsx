@@ -61,7 +61,7 @@ export default function Footer() {
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
                       <div
-                        href="#"
+                      
                         className="group flex items-center text-muted-foreground transition-colors duration-300 hover:text-primary"
                       >
                         <ChevronRight className="-ml-4 h-4 w-4 opacity-0 transition-all duration-300 group-hover:ml-0 group-hover:opacity-100" />
